@@ -37,8 +37,11 @@
 
   roller_shutters:
     name: Rolladen
+    icon: mdi:window-closed
     entities:
-    - cover.fibaro_system_fgrm222_roller_shutter_controller_2_level
+      - cover.kitchen_cover_level
+      - cover.salon_cover_front_level
+      - cover.salon_cover_side_level
 
   tv_room_thermostats:
     name: Wohnzimmer Thermostate
@@ -53,6 +56,13 @@
     entities:
       - climate.neq0872750
       - climate.neq0872213
+
+  salon_roller_shutters:
+    name: Salon Rolladen
+    icon: mdi:window-closed
+    entities:
+      - cover.salon_cover_front_level
+      - cover.salon_cover_side_level
 
   office_thermostats:
     name: Büro Thermostate
@@ -97,6 +107,8 @@
     view: yes
     entities:
       - group.salon_thermostats
+      - group.salon_roller_shutters
+
 
   kitchen:
     name: Küche
@@ -108,6 +120,7 @@
       - scene.kitchen_normal
       - scene.kitchen_relax
       - climate.neq0877235
+      - cover.kitchen_cover_level
       - binary_sensor.neq0945549_state
       - media_player.kche
       - group.traffic

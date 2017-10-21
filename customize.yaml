@@ -1,0 +1,69 @@
+scene.kitchen_relax:
+  friendly_name: Entspannung
+scene.kitchen_normal:
+  friendly_name: Normal
+climate.neq0872387:
+  friendly_name: Thermostat Diele
+climate.neq0872676:
+  friendly_name: "Thermostat 1 B\xFCro"
+climate.neq0872009:
+  friendly_name: Thermostat Unassigned
+climate.neq0873929:
+  friendly_name: Thermostat 1 Wohnzimmer
+climate.neq0873975:
+  friendly_name: Thermostat 2 Wohnzimmer
+climate.neq0872750:
+  friendly_name: Thermostat 1 Salon
+climate.neq0872213:
+  friendly_name: Thermostat 2 Salon
+climate.neq0877222:
+  friendly_name: Thermostat Bad 1. OG
+climate.neq0877235:
+  friendly_name: "Thermostat K\xFCche"
+climate.neq0877260:
+  friendly_name: Thermostat Schlafzimmer Steffi + Bernd
+binary_sensor.neq0945549_state:
+  friendly_name: "Terassent\xFCr K\xFCche"
+binary_sensor.neq0945618_state:
+  friendly_name: Fenster Bad 1. OG
+binary_sensor.neq0945660_state:
+  friendly_name: Fenster Schlafzimmer Steffi + Bernd
+switch.neq0384458:
+  friendly_name: Schalter
+  icon: mdi:power
+sensor.neq0384458_power:
+  friendly_name: Leistungsaufnahme (W)
+  icon: mdi:counter
+sensor.neq0384458_energy_counter:
+  friendly_name: Energieverbrauch (Wh)
+  icon: mdi:counter
+light.kitchen_1:
+  friendly_name: "Deckenlampe 1 K\xFCche"
+light.kitchen_2:
+  friendly_name: "Deckenlampe 2 K\xFCche"
+media_player.kche:
+  friendly_name: "Sonos Play:3 K\xFCche"
+  icon: mdi:speaker
+media_player.arbeitszimmer:
+  friendly_name: Sonos Play:5 Arbeitszimmer
+  icon: mdi:speaker
+media_player.plex_home_theater:
+  friendly_name: Plex Home Theater
+  icon: mdi:airplay
+sensor.google_travel_time__driving:
+  friendly_name: Fahrt zur Arbeit
+  icon: mdi:car
+sensor.next_departure_bochum_hbf:
+  friendly_name: Bochum Hbf
+  icon: mdi:train
+sensor.next_departure_bochum_dahlhausen:
+  friendly_name: Bochum Dahlhausen
+  icon: mdi:train
+sensor.next_departure_hattingen:
+  friendly_name: Hattingen
+  icon: mdi:train
+sensor.next_departure_essen_hbf:
+  friendly_name: Essen Hbf
+  icon: mdi:train
+zwave.fibaro_system_fgrm222_roller_shutter_controller_2:
+  node_name: Kueche Rollo

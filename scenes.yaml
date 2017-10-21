@@ -1,0 +1,29 @@
+  - name: kitchen_relax
+    entities:
+      light.kitchen_1:
+        state: on
+        rgb_color: [250,179,80]
+        brightness: 144
+        color_temp: 450
+        transition: 2
+      light.kitchen_2:
+        state: on
+        rgb_color: [250,179,80]
+        brightness: 144
+        color_temp: 450
+        transition: 2
+
+  - name: kitchen_normal
+    entities:
+      light.kitchen_1:
+        state: on
+        rgb_color: [255,200,118]
+        brightness: 254
+        color_temp: 366
+        transition: 2
+      light.kitchen_2:
+        state: on
+        rgb_color: [255,200,118]
+        brightness: 254
+        color_temp: 366
+        transition: 2

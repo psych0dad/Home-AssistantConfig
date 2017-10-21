@@ -1,0 +1,171 @@
+#################################################################
+## Groups
+#################################################################
+
+#  default_view:
+#    view: yes
+#    icon: mdi:home
+#    entities:
+#      - group.abode_status
+#      - group.weather
+#      - group.device_location
+#      - group.information
+#      - group.thermostats
+
+## people ##
+#  people:
+#    name: Personen
+#   icon: mdi:account-multiple
+#    entities:
+#      - iphone_bernd_iphone_bernd
+
+## device groups ###
+  thermostats:
+    name: Thermostate
+    icon: mdi:nest-thermostat
+    entities:
+    - climate.neq0872387
+    - climate.neq0872676
+    - climate.neq0872009
+    - climate.neq0873929
+    - climate.neq0873975
+    - climate.neq0872750
+    - climate.neq0872213
+    - climate.neq0877222
+    - climate.neq0877235
+    - climate.neq0877260
+
+  roller_shutters:
+    name: Rolladen
+    entities:
+    - cover.fibaro_system_fgrm222_roller_shutter_controller_2_level
+
+  tv_room_thermostats:
+    name: Wohnzimmer Thermostate
+    icon: mdi:nest-thermostat
+    entities:
+      - climate.neq0873975
+      - climate.neq0873929
+
+  salon_thermostats:
+    name: Salon Thermostate
+    icon: mdi:nest-thermostat
+    entities:
+      - climate.neq0872750
+      - climate.neq0872213
+
+  office_thermostats:
+    name: Büro Thermostate
+    icon: mdi:desktop-mac
+    entities:
+      - climate.neq0872676
+
+  coffee_switch:
+    name: Kaffeemaschine
+    icon: mdi:coffee
+    entities:
+      - switch.neq0384458
+      - sensor.neq0384458_power
+      - sensor.neq0384458_energy_counter
+
+  kitchen_lights:
+    name: Licht
+    icon: mdi:lightbulb-outline
+    entities:
+      - light.kitchen_1
+      - light.kitchen_2
+
+## rooms ##
+
+#  default_view:
+#    view: yes
+#    entities:
+#      - group.people
+#      - group.thermostats
+
+  tv_room:
+    name: Wohnzimmer
+    icon: mdi:television
+    view: yes
+    entities:
+      - group.tv_room_thermostats
+      - media_player.plex_home_theater
+
+  salon:
+    name: Salon
+    icon: mdi:sofa
+    view: yes
+    entities:
+      - group.salon_thermostats
+
+  kitchen:
+    name: Küche
+    icon: mdi:stove
+    view: yes
+    entities:
+      - group.coffee_switch
+      - group.kitchen_lights
+      - scene.kitchen_normal
+      - scene.kitchen_relax
+      - climate.neq0877235
+      - binary_sensor.neq0945549_state
+      - media_player.kche
+      - group.traffic
+      - cover.fibaro_system_fgrm222_roller_shutter_controller_2_level
+
+  hall:
+    name: Diele
+    icon: mdi:stairs
+    view: yes
+    entities:
+      - light.deckenlampe_flur
+      - climate.neq0872387
+
+
+  sleeping_room_sb:
+    name: Schlafzimmer Steffi & Bernd
+    icon: mdi:hotel
+    view: yes
+    entities:
+      - light.deckenlampe_schlafzimmer
+      - climate.neq0877260
+      - binary_sensor.neq0945660_state
+
+  bath_first_floor:
+    name: Bad 1. OG
+    icon: mdi:water
+    view: yes
+    entities:
+      - climate.neq0877222
+      - binary_sensor.neq0945618_state
+
+  office:
+    name: Büro Caro, Steffi & Bernd
+    icon: mdi:desktop-mac
+    view: yes
+    entities:
+      - climate.neq0872676
+
+# Traffic Widget
+  train:
+    name: S-Bahn
+    icon: mdi:train
+    entities:
+      - sensor.next_departure_bochum_hbf
+      - sensor.next_departure_bochum_dahlhausen
+      - sensor.next_departure_hattingen
+      - sensor.next_departure_essen_hbf
+
+  car:
+    name: Auto
+    icon: mdi:car
+    entities:
+      - sensor.google_travel_time__driving
+
+  traffic:
+    name: Verkehr
+    icon: mdi:train
+    view: yes
+    entities:
+      - group.train
+      - group.car

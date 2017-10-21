@@ -1,0 +1,169 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  # http://www.mapcoordinates.net/
+  latitude: 51.4254458
+  longitude: 7.1608673
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 124
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: Europe/Berlin
+
+  customize: !include customize.yaml
+  #automation: !include automations.yaml
+  #automation old: !include automations_old.yaml
+
+# Show links to resources in log and frontend
+# introduction:
+
+# Enables the frontend
+frontend:
+
+http:
+  # Uncomment this to add a password (recommended!)
+  # api_password: PASSWORD
+  api_password: nothing to see here
+  ssl_certificate: /ssl/fullchain.pem
+  ssl_key: /ssl/privkey.pem
+
+# external DB for history data
+#recorder:
+#  db_url: mysql://homeassistant:test@bibliothekar:3307/homeassistant
+
+# hass.io / not sure if needed when discovery: is active
+hassio:
+
+ios:
+config:
+
+# Checks for available updates
+updater:
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time.
+history:
+
+# View all events in a logbook
+logbook:
+
+# Track the sun
+sun:
+
+zone:
+  name: Work Steffi & Bernd
+  latitude: 51.50437
+  longitude: 7.5258513
+  radius: 500
+  icon: mdi:domain
+
+# Weather Prediction
+sensor:
+  - platform: yr
+  - platform: deutsche_bahn
+    from: Linden-Mitte, Bochum
+    to: Bochum Hbf
+  - platform: deutsche_bahn
+    from: Linden-Mitte, Bochum
+    to: Bochum-Dahlhausen
+  - platform: deutsche_bahn
+    from: Linden-Mitte, Bochum
+    to: Hattingen(Ruhr)
+  - platform: deutsche_bahn
+    from: Linden-Mitte, Bochum
+    to: Essen Hbf
+  - platform: darksky
+    api_key: 1ac8e00449a20a0c5095add7e0a78878
+    monitored_conditions:
+      - summary
+      - icon
+      - nearest_storm_distance
+      - nearest_storm_bearing
+      - precip_type
+      - precip_intensity
+      - precip_probability
+      - temperature
+      - apparent_temperature
+      - dew_point
+      - wind_speed
+      - wind_bearing
+      - cloud_cover
+      - humidity
+      - pressure
+      - visibility
+      - ozone
+      - minutely_summary
+      - hourly_summary
+      - daily_summary
+      - temperature_max
+      - temperature_min
+      - apparent_temperature_max
+      - apparent_temperature_min
+      - precip_intensity_max
+  - platform: google_travel_time
+    api_key: AIzaSyDt1ao3RLc1a7RruJNPk7oYG1DstiVTILQ
+    origin: zone.home
+    destination: zone.work_steffi__bernd
+  - platform: template
+    sensors:
+      next_departure_bochum_hbf:
+        value_template: '{{ states.sensor.lindenmitte_bochum_to_bochum_hbf.attributes.next }}'
+        friendly_name: 'Bochum Hbf'
+      next_departure_bochum_dahlhausen:
+        value_template: '{{ states.sensor.lindenmitte_bochum_to_bochumdahlhausen.attributes.next }}'
+        friendly_name: 'Bochum-Dahlhausen'
+      next_departure_hattingen:
+        value_template: '{{ states.sensor.lindenmitte_bochum_to_hattingenruhr.attributes.next }}'
+        friendly_name: 'Hattingen'
+      next_departure_essen_hbf:
+        value_template: '{{ states.sensor.lindenmitte_bochum_to_bochum_hbf.attributes.next }}'
+        friendly_name: 'Essen Hbf'
+
+# Homematic CCU
+homematic:
+  hosts:
+    wired:
+      ip: 192.168.178.51
+#  resolvenames: metadata
+
+# thermostat:
+#   platform: max
+#   ip: 192.168.178.22
+#   port: <Port of MaxCube - default is 62910>
+
+zwave:
+  usb_path: /dev/ttyACM0
+  device_config: !include zwave_device_config.yaml
+#  config_path:
+#/srv/homeassistant/homeassistant_venv/lib/python3.4/site-packages/libopenzwave-0.3.1-py3.4-linux-armv7l.egg/config
+
+light:
+  platform: hue
+  host: 192.168.178.40
+
+media_player:
+  platform: sonos
+
+device_tracker:
+  - platform: fritz
+  - platform: owntracks
+#    max_gps_accuracy: 500
+    waypoints: True
+    waypoint_whitelist:
+      - iphone_bernd
+
+#mqtt:
+#  broker: m21.cloudmqtt.com
+#  port: 26282
+#  username: homeassistent
+#  password: yiK@MRH7pT9f@m
+
+group: !include groups.yaml
+scene: !include scenes.yaml

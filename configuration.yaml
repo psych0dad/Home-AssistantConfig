@@ -106,7 +106,7 @@ sensor:
   - platform: google_travel_time
     api_key: !secret google_travel_time
     origin: zone.home
-    destination: zone.work_steffi__bernd
+    destination: zone.work_bernd
   - platform: template
     sensors:
       next_departure_bochum_hbf:

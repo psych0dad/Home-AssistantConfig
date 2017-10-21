@@ -13,8 +13,7 @@ homeassistant:
   time_zone: Europe/Berlin
 
   customize: !include customize.yaml
-  #automation: !include automations.yaml
-  #automation old: !include automations_old.yaml
+#  automation old: !include automations_old.yaml
 
 # Show links to resources in log and frontend
 # introduction:
@@ -154,3 +153,4 @@ device_tracker:
 
 group: !include groups.yaml
 scene: !include scenes.yaml
+automation: !include automations.yaml

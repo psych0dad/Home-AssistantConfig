@@ -5,3 +5,4 @@
     to: 'on'
   action:
     - service: cover.open_cover
+    - entity_id: cover.kitchen_cover_level

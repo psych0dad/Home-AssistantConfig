@@ -67,3 +67,10 @@ sensor.next_departure_essen_hbf:
   icon: mdi:train
 zwave.fibaro_system_fgrm222_roller_shutter_controller_2:
   node_name: Kueche Rollo
+  friendly_name: "Rolladen K\xFCche"
+zwave.fibaro_system_fgrm222_roller_shutter_controller_2_2:
+  node_name: Salon Rollo Vorne
+  friendly_name: "Rolladen Salon Vorne"
+zwave.fibaro_system_fgrm222_roller_shutter_controller_2_3:
+  node_name: Salon Rollo Seite
+  friendly_name: "Rolladen Salon Seite"

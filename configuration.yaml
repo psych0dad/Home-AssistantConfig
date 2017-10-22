@@ -150,6 +150,12 @@ device_tracker:
 #  username: !secret mqtt_username
 #  password: !secret mqtt_password
 
+notify:
+  - name: web
+    platform: html5
+    gcm_api_key: !secret gcm_sender_key
+    gcm_sender_id: !secret gcm_sender_id
+
 group: !include groups.yaml
 scene: !include scenes.yaml
 automation: !include automations.yaml

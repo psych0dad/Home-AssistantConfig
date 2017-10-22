@@ -1,8 +1,0 @@
-- alias: 'door opens shutter'
-  trigger:
-    - platform: state
-      entity_id: binary_sensor.neq0945549_state
-      to: 'on'
-  action:
-    service: cover.open_cover
-    entity_id: cover.kitchen_cover_level

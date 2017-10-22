@@ -13,12 +13,8 @@
       event: sunrise
       offset: '+00:30:00'
   action:
-    - service: cover.open_cover
-      entity_id: cover.kitchen_cover_level
-    - service: cover.open_cover
-      entity_id: cover.salon_cover_front_level
-    - service: cover.open_cover
-      entity_id: cover.salon_cover_side_level
+    - service: cover.close_cover
+      entity_id: group.all_covers
 
 - alias: 'close shutters in the evening'
   trigger:
@@ -27,11 +23,7 @@
       offset: '01:00:00'
   action:
     - service: cover.close_cover
-      entity_id: cover.kitchen_cover_level
-    - service: cover.close_cover
-      entity_id: cover.salon_cover_front_level
-    - service: cover.close_cover
-      entity_id: cover.salon_cover_side_level
+      entity_id: group.all_covers
 
 - alias: 'close all shutters on double tap'
   trigger:
@@ -52,11 +44,7 @@
         scene_id: 24
   action:
     - service: cover.close_cover
-      entity_id: cover.kitchen_cover_level
-    - service: cover.close_cover
-      entity_id: cover.salon_cover_front_level
-    - service: cover.close_cover
-      entity_id: cover.salon_cover_side_level
+      entity_id: group.all_covers
 
 - alias: 'open all shutters on double tap'
   trigger:
@@ -77,8 +65,4 @@
         scene_id: 14
   action:
     - service: cover.open_cover
-      entity_id: cover.kitchen_cover_level
-    - service: cover.open_cover
-      entity_id: cover.salon_cover_front_level
-    - service: cover.open_cover
-      entity_id: cover.salon_cover_side_level
+      entity_id: group.all_covers

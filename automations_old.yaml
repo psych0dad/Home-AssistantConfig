@@ -25,9 +25,6 @@
     - platform: sun
       event: sunset
       offset: '01:00:00'
-  condition:
-    - sevice: time
-      after: '22:00:00'
   action:
     - service: cover.close_cover
       entity_id: cover.kitchen_cover_level

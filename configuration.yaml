@@ -118,7 +118,9 @@ media_player:
   platform: sonos
 
 device_tracker:
-  - platform: fritz
+  - platform: unifi
+    username: !secret unifi_username
+    password: !secret unifi_password
   - platform: owntracks
     waypoints: True
     waypoint_whitelist:

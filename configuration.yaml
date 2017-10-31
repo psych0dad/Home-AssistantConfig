@@ -80,6 +80,14 @@ sensor:
     monitored_conditions:
       - summary
       - icon
+      - temperature
+      - humidity
+      - precip_probability
+      - precip_intensity
+      - wind_speed
+      - pressure
+      - wind_bearing
+      - apparent_temperature
   - platform: google_travel_time
     api_key: !secret google_travel_time
     origin: zone.home

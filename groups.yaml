@@ -183,3 +183,17 @@
     entities:
       - group.train
       - group.car
+
+# Wake up light
+  wakeuplight:
+    name: Wakeup light
+    control: hidden
+    entities:
+      - sensor.wakeup_alarm_time
+      - sensor.wakeup_start_time_lights
+      - sensor.wakeup_fadein_duration
+      - input_slider.wakeup_hour
+      - input_slider.wakeup_minutes
+      - input_slider.wakeup_duration
+      - input_boolean.wakeup
+      - input_boolean.wakeup_weekends

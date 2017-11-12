@@ -87,6 +87,43 @@ device_tracker:
     waypoint_whitelist:
       - iphone_bernd
 
+# input components
+input_number:
+  wakeup_hour:
+    name: Hour
+    icon: mdi:clock-in
+    initial: 6
+    min: 0
+    max: 23
+    step: 1
+
+  wakeup_minutes:
+    name: Minutes
+    icon: mdi:clock-in
+    initial: 30
+    min: 0
+    max: 55
+    step: 5
+
+  wakeup_duration:
+    name: Light fade-in duration
+    icon: mdi:clock-in
+    initial: 10
+    min: 5
+    max: 60
+    step: 5
+
+input_boolean:
+  wakeup:
+    name: 'Enable wakeup light'
+    icon: mdi:power
+    initial: off
+
+  wakeup_weekends:
+    name: 'Wakeup weekends'
+    icon: mdi:power
+    initial: off
+
 #mqtt:
 #  broker: m21.cloudmqtt.com
 #  port: 26282

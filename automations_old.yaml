@@ -66,3 +66,34 @@
   action:
     - service: cover.open_cover
       entity_id: group.all_covers
+# wake up lights
+- alias: 'wake up bedroom'
+  hide_entity: True
+  trigger:
+    platform: template
+    value_template: '{{ states.sensor.time.state == states.sensor.wakeup_start_time_lights.state }}'
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_boolean.wakeup
+        state: 'on'
+      - condition: or
+        conditions:
+          - condition: state
+            entity_id: input_boolean.wakeup_weekends
+            state: 'on'
+          - condition: time
+            weekday:
+              - mon
+              - tue
+              - wed
+              - thu
+              - fri
+  action:
+    service: light.turn_on
+    data:
+      entity_id: light.hue_go_1, light.hue_go_2
+      profile: relax
+    data_template:
+      transition: '{{ states.input_slider.wakeup_duration.state | multiply(60) | float }}'

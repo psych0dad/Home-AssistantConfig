@@ -1,0 +1,46 @@
+- platform: yr
+- platform: deutsche_bahn
+  from: Linden-Mitte, Bochum
+  to: Bochum Hbf
+- platform: deutsche_bahn
+  from: Linden-Mitte, Bochum
+  to: Bochum-Dahlhausen
+- platform: deutsche_bahn
+  from: Linden-Mitte, Bochum
+  to: Hattingen(Ruhr)
+- platform: deutsche_bahn
+  from: Linden-Mitte, Bochum
+  to: Essen Hbf
+- platform: darksky
+  api_key: !secret darksky
+  update_interval:
+    minutes: 5
+  monitored_conditions:
+    - summary
+    - icon
+    - temperature
+    - humidity
+    - precip_probability
+    - precip_intensity
+    - wind_speed
+    - pressure
+    - wind_bearing
+    - apparent_temperature
+- platform: google_travel_time
+  api_key: !secret google_travel_time
+  origin: zone.home
+  destination: zone.work_bernd
+- platform: template
+  sensors:
+    next_departure_bochum_hbf:
+      value_template: '{{ states.sensor.lindenmitte_bochum_to_bochum_hbf.attributes.next }}'
+      friendly_name: 'Bochum Hbf'
+    next_departure_bochum_dahlhausen:
+      value_template: '{{ states.sensor.lindenmitte_bochum_to_bochumdahlhausen.attributes.next }}'
+      friendly_name: 'Bochum-Dahlhausen'
+    next_departure_hattingen:
+      value_template: '{{ states.sensor.lindenmitte_bochum_to_hattingenruhr.attributes.next }}'
+      friendly_name: 'Hattingen'
+    next_departure_essen_hbf:
+      value_template: '{{ states.sensor.lindenmitte_bochum_to_bochum_hbf.attributes.next }}'
+      friendly_name: 'Essen Hbf'

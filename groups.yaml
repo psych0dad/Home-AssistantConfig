@@ -125,6 +125,7 @@
       - media_player.kche
       - group.traffic
       - cover.fibaro_system_fgrm222_roller_shutter_controller_2_level
+      - binary_sensor.motion_detector_sensor
 
   hall:
     name: Diele

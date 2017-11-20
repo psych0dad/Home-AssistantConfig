@@ -58,8 +58,6 @@ zone:
   radius: 500
   icon: mdi:domain
 
-sensor: !include sensors.yaml
-
 # Homematic CCU
 homematic:
   hosts:
@@ -136,6 +134,7 @@ notify:
     gcm_api_key: !secret gcm_sender_key
     gcm_sender_id: !secret gcm_sender_id
 
+sensor: !include sensors.yaml
 group: !include groups.yaml
 scene: !include scenes.yaml
 automation: !include automations.yaml

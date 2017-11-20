@@ -144,6 +144,7 @@
       - light.deckenlampe_schlafzimmer
       - climate.neq0877260
       - binary_sensor.neq0945660_state
+      - group.wakeuplight
 
   bath_first_floor:
     name: Bad 1. OG
@@ -192,8 +193,8 @@
       - sensor.wakeup_alarm_time
       - sensor.wakeup_start_time_lights
       - sensor.wakeup_fadein_duration
-      - input_slider.wakeup_hour
-      - input_slider.wakeup_minutes
-      - input_slider.wakeup_duration
+      - input_number.wakeup_hour
+      - input_number.wakeup_minutes
+      - input_number.wakeup_duration
       - input_boolean.wakeup
       - input_boolean.wakeup_weekends

@@ -93,7 +93,7 @@
   action:
     service: light.turn_on
     data:
-      entity_id: light.hue_go_1, light.hue_go_2
+      entity_id: light.deckenlampe_schlafzimmer
       profile: relax
     data_template:
-      transition: '{{ states.input_slider.wakeup_duration.state | multiply(60) | float }}'
+      transition: '{{ states.input_number.wakeup_duration.state | multiply(60) | float }}'

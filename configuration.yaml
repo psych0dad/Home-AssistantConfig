@@ -92,7 +92,7 @@ input_number:
   wakeup_hour:
     name: Hour
     icon: mdi:clock-in
-    initial: 6
+    initial: 8
     min: 0
     max: 23
     step: 1
@@ -100,7 +100,7 @@ input_number:
   wakeup_minutes:
     name: Minutes
     icon: mdi:clock-in
-    initial: 30
+    initial: 0
     min: 0
     max: 55
     step: 5

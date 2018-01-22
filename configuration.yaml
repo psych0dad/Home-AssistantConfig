@@ -85,9 +85,9 @@ zwave:
   device_config: !include zwave_device_config.yaml
   network_key: !secret zwave_network_key
 
-light:
-  platform: hue
-  host: !secret hue_ip
+hue:
+  bridges:
+    - host: !secret hue_ip
 
 media_player:
   platform: sonos

@@ -94,6 +94,9 @@ media_player:
 
 device_tracker:
   - platform: unifi
+    host: bibliothekar
+    port: 8443
+    verify_ssl: false
     username: !secret unifi_username
     password: !secret unifi_password
   - platform: owntracks

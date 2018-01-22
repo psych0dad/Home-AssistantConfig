@@ -2,39 +2,10 @@ scene.kitchen_relax:
   friendly_name: Entspannung
 scene.kitchen_normal:
   friendly_name: Normal
-climate.neq0872387:
-  friendly_name: Thermostat Diele
-climate.neq0872676:
-  friendly_name: "Thermostat 1 B\xFCro"
-climate.neq0872009:
-  friendly_name: Thermostat Unassigned
-climate.neq0873929:
-  friendly_name: Thermostat 1 Wohnzimmer
-climate.neq0873975:
-  friendly_name: Thermostat 2 Wohnzimmer
-climate.neq0872750:
-  friendly_name: Thermostat 1 Salon
-climate.neq0872213:
-  friendly_name: Thermostat 2 Salon
-climate.neq0877222:
-  friendly_name: Thermostat Bad 1. OG
-climate.neq0877235:
-  friendly_name: "Thermostat K\xFCche"
-climate.neq0877260:
-  friendly_name: Thermostat Schlafzimmer Steffi + Bernd
-binary_sensor.neq0945549_state:
-  friendly_name: "Terassent\xFCr K\xFCche"
-binary_sensor.neq0945618_state:
-  friendly_name: Fenster Bad 1. OG
-binary_sensor.neq0945660_state:
-  friendly_name: Fenster Schlafzimmer Steffi + Bernd
-switch.neq0384458:
-  friendly_name: Schalter
-  icon: mdi:power
-sensor.neq0384458_power:
+sensor.stromschalter_kuche_power:
   friendly_name: Leistungsaufnahme (W)
   icon: mdi:counter
-sensor.neq0384458_energy_counter:
+sensor.stromschalter_kuche_energy_counter:
   friendly_name: Energieverbrauch (Wh)
   icon: mdi:counter
 light.kitchen_1:

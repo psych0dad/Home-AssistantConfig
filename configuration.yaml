@@ -99,10 +99,10 @@ device_tracker:
     verify_ssl: false
     username: !secret unifi_username
     password: !secret unifi_password
-  - platform: owntracks
-    waypoints: True
-    waypoint_whitelist:
-      - iphone_bernd
+  # - platform: owntracks
+  #   waypoints: True
+  #   waypoint_whitelist:
+  #     - iphone_bernd
 
 # input components
 input_number:

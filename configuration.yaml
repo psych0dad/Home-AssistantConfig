@@ -60,9 +60,25 @@ zone:
 
 # Homematic CCU
 homematic:
+  interfaces:
+    rf_ccu2_rpc:
+      host: !secret homematic_host
+      port: 2001
+      resolvenames: json
+      username: !secret homematic_username
+      password: !secret homematic_password
+    groups:
+        host: !secret homematic_host
+        port: 9292
+        resolvenames: json
+        username: !secret homematic_username
+        password: !secret homematic_password
+        path: /groups
   hosts:
-    wired:
-      ip: !secret homematic_ip
+    ccu2:
+      host: !secret homematic_host
+      username: !secret homematic_username
+      password: !secret homematic_password
 
 zwave:
   usb_path: /dev/ttyACM0

@@ -104,7 +104,7 @@ device_tracker:
   #   waypoint_whitelist:
   #     - iphone_bernd
 
-# input components
+## input components ##
 input_number:
   wakeup_hour:
     name: Hour

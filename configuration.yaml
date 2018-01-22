@@ -153,6 +153,33 @@ notify:
     gcm_api_key: !secret gcm_sender_key
     gcm_sender_id: !secret gcm_sender_id
 
+alexa:
+  intents:
+    LocateIntent:
+      action:
+        service: notify.pushover
+        data:
+          message: Your location has been queried via Alexa.
+      speech:
+        type: plaintext
+        text: >
+          {%- for state in states.device_tracker -%}
+            {%- if state.name.lower() == User.lower() -%}
+              {{ state.name }} ist {{ state.state }}
+            {%- endif -%}
+          {%- else -%}
+            Tut mir leid. Ich weiß nicht wo {{User}} ist.
+          {%- endfor -%}
+    WhereAreWeIntent:
+      speech:
+        type: plaintext
+        text: >
+          {%- if is_state('device_tracker.espirit_bernd', 'home') -%}
+            Bernds iPhone ist zuhause.
+          {%- else -%}
+            Bernds iPhone ist nicht zuhause.
+          {% endif %}
+
 sensor: !include sensors.yaml
 group: !include groups.yaml
 scene: !include scenes.yaml

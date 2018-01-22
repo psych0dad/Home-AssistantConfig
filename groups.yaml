@@ -2,22 +2,37 @@
 ## Groups
 #################################################################
 
-#  default_view:
-#    view: yes
-#    icon: mdi:home
-#    entities:
-#      - group.abode_status
-#      - group.weather
-#      - group.device_location
-#      - group.information
-#      - group.thermostats
+  default_view:
+    view: yes
+    icon: mdi:home
+    entities:
+      - group.people
+      - group.weather
+      - group.traffic
+      - group.thermostats
+      - group.roller_shutters
 
 ## people ##
-#  people:
-#    name: Personen
-#   icon: mdi:account-multiple
-#    entities:
-#      - iphone_bernd_iphone_bernd
+  people:
+    name: Personen
+    icon: mdi:account-multiple
+    entities:
+      - device_tracker.espirit_bernd
+      - device_tracker.iphone_von_stephanie
+      - device_tracker.carolins_iphone
+
+## weather ##
+  weather:
+    name: Wetter
+    icon: mdi:weather-sunny
+    entities:
+      - sun.sun
+      - sensor.dark_sky_icon
+      - sensor.dark_sky_summary
+      - sensor.dark_sky_temperature
+      - sensor.dark_sky_wind_speed
+      - sensor.dark_sky_precip_probability
+      - sensor.dark_sky_pressure
 
 ## device groups ###
   thermostats:
@@ -172,7 +187,7 @@
       - sensor.next_departure_essen_hbf
 
   car:
-    name: Auto
+    name: Arbeit
     icon: mdi:car
     entities:
       - sensor.google_travel_time__driving

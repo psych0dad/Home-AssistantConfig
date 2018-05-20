@@ -17,6 +17,10 @@ homeassistant:
 # Show links to resources in log and frontend
 # introduction:
 
+# data logging
+recorder:
+    purge_keep_days: 30
+
 # Enables the frontend
 frontend:
 

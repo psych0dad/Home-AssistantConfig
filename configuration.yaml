@@ -184,4 +184,3 @@ sensor: !include sensors.yaml
 group: !include groups.yaml
 scene: !include scenes.yaml
 automation: !include automations.yaml
-automation old: !include automations_old.yaml

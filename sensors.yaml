@@ -47,6 +47,9 @@
         value_template: '{{ states.sensor.lindenmitte_bochum_to_bochum_hbf.attributes.next }}'
         friendly_name: 'Essen Hbf'
 # template for hue wakeup light
+  - platform: time_date
+    display_options:
+      - 'time'
   - platform: template
     sensors:
       wakeup_alarm_time:

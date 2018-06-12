@@ -67,6 +67,29 @@
   action:
   - service: cover.open_cover
     entity_id: group.all_covers
+- id: 'shadow_mode_for_all_shutters_on_tripple_tap'
+  alias: shadow mode for all shutters on tripple tap
+  trigger:
+  - platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      entity_id: zwave.kitchen_cover
+      scene_id: 25
+  - platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      entity_id: zwave.salon_cover_front
+      scene_id: 25
+  - platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      entity_id: zwave.salon_cover_side
+      scene_id: 25
+  action:
+  - service: cover.set_cover_position
+    data:
+      entity_id: group.all_covers
+      position: 30
 - id: 'wake_up_light_in_bedroom'
   alias: wake up light in bedroom
   hide_entity: true

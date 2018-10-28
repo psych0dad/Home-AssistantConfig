@@ -76,6 +76,10 @@ homematic:
       resolvenames: json
       username: !secret homematic_username
       password: !secret homematic_password
+    rf_occu_rpc:
+      host: core-homematic
+      port: 2001
+      resolvenames: json
     groups:
         host: !secret homematic_host
         port: 9292
@@ -88,6 +92,8 @@ homematic:
       host: !secret homematic_host
       username: !secret homematic_username
       password: !secret homematic_password
+    occu:
+      host: localhost
 
 zwave:
   usb_path: /dev/ttyACM0

@@ -12,6 +12,10 @@ homeassistant:
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: Europe/Berlin
 
+  auth_providers:
+    - type: homeassistant
+    - type: legacy_api_password
+
   customize: !include customize.yaml
 
 # Show links to resources in log and frontend

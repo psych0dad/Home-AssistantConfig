@@ -113,7 +113,7 @@
 
   tv_room:
     name: Wohnzimmer
-    icon: mdi:television
+    icon: mdi:theater
     view: yes
     entities:
       - group.tv_room_thermostats

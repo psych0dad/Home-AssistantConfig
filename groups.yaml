@@ -49,6 +49,8 @@
       - climate.thermostat_schlafzimmer_steffi__bernd
       - climate.thermostat_wohnzimmer_hl
       - climate.thermostat_wohnzimmer_vr
+      - climate.thermostat_steffi
+      - climate.thermostat_guests
 
   roller_shutters:
     name: Rolladen
@@ -160,9 +162,23 @@
       - binary_sensor.fensterkontakt_schlafzimmer_steffi__bernd_state
       - group.wakeuplight
 
+  room_steffi:
+      name: Zimmer Steffi
+      icon: mdi:hinduism
+      view: yes
+      entities:
+        - climate.thermostat_steffi
+
+  room_guests:
+      name: Gästezimmer
+      icon: mdi:human-greeting
+      view: yes
+      entities:
+        - climate.thermostat_guests
+
   bath_first_floor:
     name: Bad 1. OG
-    icon: mdi:water
+    icon: mdi:duck
     view: yes
     entities:
       - climate.thermostat_bad_1_og

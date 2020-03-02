@@ -159,6 +159,8 @@
     icon: mdi:hotel
     entities:
       - light.deckenlampe_schlafzimmer
+      - climate.thermostat_schlafzimmer_steffi_bernd
+      - binary_sensor.thermostat_schlafzimmer_steffi_bernd_lowbat
       - group.wakeuplight
       - cover.sleeping_room_sb_cover
 

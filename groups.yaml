@@ -53,9 +53,9 @@
     name: Rolladen
     icon: mdi:window-closed
     entities:
-      - cover.kitchen_cover_level
-      - cover.salon_cover_front_level
-      - cover.salon_cover_side_level
+      - cover.kitchen_cover
+      - cover.salon_cover_back
+      - cover.salon_cover_side
 
   tv_room_thermostats:
     name: Wohnzimmer Thermostate
@@ -75,8 +75,8 @@
     name: Salon Rolladen
     icon: mdi:window-closed
     entities:
-      - cover.salon_cover_front_level
-      - cover.salon_cover_side_level
+      - cover.salon_cover_back
+      - cover.salon_cover_side
 
   office_thermostats:
     name: Büro Thermostate
@@ -128,11 +128,10 @@
       - scene.kitchen_normal
       - scene.kitchen_relax
       - climate.thermostat_kuche
-      - cover.kitchen_cover_level
+      - cover.kitchen_cover
       - binary_sensor.turkontakt_terassentur_kuche_state
       - media_player.kche
       - group.traffic
-      - cover.fibaro_system_fgrm222_roller_shutter_controller_2_level
       - binary_sensor.motion_detector_sensor
 
   hall:

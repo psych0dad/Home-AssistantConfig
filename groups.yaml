@@ -43,7 +43,7 @@
       - climate.thermostat_kuche
       - climate.thermostat_salon_hr
       - climate.thermostat_salon_vl
-      - climate.thermostat_schlafzimmer_steffi__bernd
+      - climate.thermostat_schlafzimmer_steffi_bernd
       - climate.thermostat_wohnzimmer_hl
       - climate.thermostat_wohnzimmer_vr
       - climate.thermostat_steffi
@@ -147,8 +147,6 @@
     icon: mdi:hotel
     entities:
       - light.deckenlampe_schlafzimmer
-      - climate.thermostat_schlafzimmer_steffi__bernd
-      - binary_sensor.fensterkontakt_schlafzimmer_steffi__bernd_state
       - group.wakeuplight
 
   room_steffi:
@@ -191,7 +189,6 @@
     name: Arbeit
     icon: mdi:car
     entities:
-      - sensor.google_travel_time__driving
 
   traffic:
     name: Verkehr

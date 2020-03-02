@@ -3,7 +3,6 @@
 #################################################################
 
   default_view:
-    view: yes
     icon: mdi:home
     entities:
       - group.people
@@ -17,9 +16,7 @@
     name: Personen
     icon: mdi:account-multiple
     entities:
-      - device_tracker.espirit_bernd
-      - device_tracker.iphone_von_stephanie
-      - device_tracker.carolins_iphone
+      - person.bernd
 
 ## weather ##
   weather:
@@ -105,24 +102,19 @@
 
 ## rooms ##
 
-#  default_view:
-#    view: yes
-#    entities:
-#      - group.people
-#      - group.thermostats
-
   tv_room:
     name: Wohnzimmer
     icon: mdi:theater
-    view: yes
     entities:
       - group.tv_room_thermostats
       - media_player.plex_home_theater
+      - cover.livingroom_cover_front
+      - cover.livingroom_cover_side
+      - cover.livingroom_cover_tower
 
   salon:
     name: Salon
     icon: mdi:sofa
-    view: yes
     entities:
       - group.salon_thermostats
       - group.salon_roller_shutters
@@ -130,7 +122,6 @@
   kitchen:
     name: Küche
     icon: mdi:stove
-    view: yes
     entities:
       - group.coffee_switch
       - group.kitchen_lights
@@ -147,7 +138,6 @@
   hall:
     name: Flur
     icon: mdi:stairs
-    view: yes
     entities:
       - light.deckenlampe_flur
       - climate.thermostat_flur
@@ -155,7 +145,6 @@
   sleeping_room_sb:
     name: Schlafzimmer Steffi & Bernd
     icon: mdi:hotel
-    view: yes
     entities:
       - light.deckenlampe_schlafzimmer
       - climate.thermostat_schlafzimmer_steffi__bernd
@@ -165,21 +154,18 @@
   room_steffi:
       name: Zimmer Steffi
       icon: mdi:hinduism
-      view: yes
       entities:
         - climate.thermostat_steffi
 
   room_guests:
       name: Gästezimmer
       icon: mdi:human-greeting
-      view: yes
       entities:
         - climate.thermostat_guests
 
   bath_first_floor:
     name: Bad 1. OG
     icon: mdi:duck
-    view: yes
     entities:
       - climate.thermostat_bad_1_og
       - binary_sensor.fensterkontakt_bad_1_og_state
@@ -187,7 +173,6 @@
   office:
     name: Büro Caro, Steffi & Bernd
     icon: mdi:desktop-mac
-    view: yes
     entities:
       - group.office_thermostats
       - light.deckenlampe_arbeitszimmer
@@ -211,7 +196,6 @@
   traffic:
     name: Verkehr
     icon: mdi:train
-    view: yes
     entities:
       - group.train
       - group.car
@@ -219,7 +203,6 @@
 ## Wake up light ##
   wakeuplight:
     name: Wakeup light
-    control: hidden
     entities:
       - sensor.wakeup_alarm_time
       - sensor.wakeup_start_time_lights

@@ -188,6 +188,7 @@
     name: Arbeit
     icon: mdi:car
     entities:
+      - sensor.google_travel_time_driving
 
   traffic:
     name: Verkehr

@@ -56,6 +56,10 @@
       - cover.kitchen_cover
       - cover.salon_cover_back
       - cover.salon_cover_side
+      - cover.livingroom_cover_front
+      - cover.livingroom_cover_side
+      - cover.livingroom_cover_tower
+      - cover.sleeping_room_sb_cover
 
   tv_room_thermostats:
     name: Wohnzimmer Thermostate
@@ -63,6 +67,14 @@
     entities:
       - climate.thermostat_wohnzimmer_hl
       - climate.thermostat_wohnzimmer_vr
+
+  tv_room_roller_shutters:
+    name: Wohnzimmer Rolladen
+    icon: mdi:window-closed
+    entities:
+      - cover.livingroom_cover_front
+      - cover.livingroom_cover_side
+      - cover.livingroom_cover_tower
 
   salon_thermostats:
     name: Salon Thermostate
@@ -147,6 +159,7 @@
     entities:
       - light.deckenlampe_schlafzimmer
       - group.wakeuplight
+      - cover.sleeping_room_sb_cover
 
   room_steffi:
       name: Zimmer Steffi

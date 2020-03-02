@@ -2,7 +2,7 @@
   - platform: yr
   - platform: darksky
     api_key: !secret darksky
-    update_interval:
+    scan_interval:
       minutes: 5
     monitored_conditions:
       - summary

@@ -152,6 +152,7 @@
     entities:
       - light.deckenlampe_flur
       - climate.thermostat_flur
+      - zwave.popp_co_smoke_detector_and_siren
 
   sleeping_room_sb:
     name: Schlafzimmer Steffi & Bernd
